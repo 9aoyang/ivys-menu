@@ -8,7 +8,7 @@
 
 **Tech Stack:** Next.js 15 (App Router, Server Actions), React 19, TypeScript 5, Tailwind CSS 4, Framer Motion 12, Supabase JS v2, Zod (input validation), Vitest (unit tests), @testing-library/react (component tests).
 
-**Reference:** See spec at `docs/superpowers/specs/2026-04-21-ivys-menu-product-design.md` (in SkillQuest repo) for full product context. This plan assumes a **new repository** named `ivys-menu` at `/Users/gaoyang/Documents/github/ivys-menu/`.
+**Reference:** See spec at `docs/specs/2026-04-21-ivys-menu-product-design.md` in this repo for full product context. Implementation happens in-place; the first task (0.1) bootstraps the Next.js project at the repo root.
 
 **Phase 1 Scope (this plan):**
 
@@ -2850,8 +2850,8 @@ npm run dev
 
 ## 文档
 
-- 产品 spec：`/Users/gaoyang/Documents/github/skill_quest/docs/superpowers/specs/2026-04-21-ivys-menu-product-design.md`
-- Phase 1 计划：`/Users/gaoyang/Documents/github/skill_quest/docs/superpowers/plans/2026-04-21-ivys-menu-phase1-mvp.md`
+- 产品 spec：`docs/specs/2026-04-21-ivys-menu-product-design.md`
+- Phase 1 计划：`docs/plans/2026-04-21-ivys-menu-phase1-mvp.md`
 - Phase 2 计划：待 Phase 1 完成后通过 `superpowers:writing-plans` 生成
 ````
 

@@ -1,6 +1,6 @@
 # Ivy's Menu — 产品设计 Spec
 
-> **归属说明**：此 spec 描述的是一个**独立的新产品**（新仓库、新 Supabase 项目、新域名），并非 SkillQuest 的功能扩展。文档存放在 SkillQuest 的 `docs/superpowers/specs/` 仅作为设计讨论的存档。实际实现应在新仓库进行。
+> **归属说明**：此 spec 描述 **Ivy's Menu** 这个独立产品。最初 brainstorming 发生在 SkillQuest 工作目录中，spec 与 plan 随后迁移到本仓库（`ivys-menu`）作为项目的权威文档位置。
 >
 > **讨论日期**：2026-04-21
 > **讨论方式**：Claude Code 对话 + visual brainstorming companion
