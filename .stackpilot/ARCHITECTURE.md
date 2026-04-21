@@ -1,5 +1,7 @@
 # Ivy's Menu — Architecture
 
+> **Repo**: https://github.com/9aoyang/ivys-menu (private)
+>
 > **Repo state at initialization**: greenfield. No `src/` yet. Canonical design and
 > implementation plan live under `docs/`:
 > - `docs/specs/2026-04-21-ivys-menu-product-design.md` — product design spec
@@ -33,7 +35,7 @@ in `localStorage`.
 | Styling | Tailwind CSS 4 + Framer Motion 12 |
 | Database | Supabase (PostgreSQL) — **dedicated new project**, not shared with any other app |
 | Storage | Supabase Storage (recipe cover images) |
-| Deployment | Netlify (single site, `@netlify/plugin-nextjs`) |
+| Deployment | Netlify (single site, `@netlify/plugin-nextjs`) — live at https://legendary-gecko-fb557e.netlify.app (custom domain `ivys.menu` pending) |
 | Validation | Zod |
 | Testing | Vitest + @testing-library/react + jsdom |
 | Runtime LLM | **None.** All AI-driven tasks (recipe structuring, shopping-list generation) happen in Claude Code conversations; the app only reads/writes Supabase. |
