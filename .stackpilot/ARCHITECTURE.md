@@ -117,6 +117,16 @@ two people know the URL.
 
 ## Conventions & Gotchas
 
+- **Next.js 16, not 15**: `create-next-app@latest` installed 16.2.4. The original plan said 15; we stay on latest. Specific 16 deltas that affect our code:
+  - **Async Request APIs are mandatory**: `cookies()`, `headers()`, `draftMode()`, and page/layout/route props `params` / `searchParams` are `Promise`-typed. Every page with a dynamic segment needs `const { x } = await props.params`. Every server action / route handler that reads cookies or headers needs `await cookies()` / `await headers()`.
+  - **Middleware is deprecated in favor of `proxy`**: `middleware.ts` still works but emits a deprecation warning. `proxy` runs in nodejs only (no edge runtime). For the role guard (Task 2.4), write as `proxy.ts` with `export function proxy(request: Request)`.
+  - **Turbopack is the default for dev + build**: no `--turbopack` flag needed in npm scripts. If a custom webpack config ever lands, `next build` will fail by default; opt out explicitly with `--webpack` only if required.
+  - **`next lint` is removed**: `package.json` already uses `"lint": "eslint"` — don't add `next lint` back.
+  - **`next/image` defaults shifted**: `minimumCacheTTL` is now 4h (was 60s), `qualities` defaults to `[75]` only. Fine for our recipe covers; flag in `next.config.ts` only if we ever need other qualities.
+  - **PPR's `experimental_ppr` / `experimental.ppr` is gone**; new equivalent is `cacheComponents: true`. We don't opt in for Phase 1.
+  - **`serverRuntimeConfig` / `publicRuntimeConfig` removed**: always read env vars directly; use `NEXT_PUBLIC_` prefix for client-exposed values.
+  - **Node 20.9+ / TypeScript 5.1+ required.**
+
 <!-- project-specific conventions, decisions, gotchas; add entries as they surface -->
 
 ## Review Patterns
