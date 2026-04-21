@@ -1,0 +1,5 @@
+# Stackpilot project configuration (auto-generated)
+
+qa:
+  coverage_threshold: 80
+  test_command: npm test
