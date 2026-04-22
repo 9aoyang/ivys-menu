@@ -1,0 +1,14 @@
+{
+  "name": "Ivy's Menu",
+  "short_name": "Ivy's Menu",
+  "description": "家庭私人餐厅 · 顾客端",
+  "start_url": "/menu",
+  "scope": "/menu",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ec4899",
+  "icons": [
+    { "src": "/icons/ivy-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/ivy-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
