@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import RoleGuard from '@/components/RoleGuard';
 
 export const metadata: Metadata = {
   title: "Ivy's Menu · 餐厅",
@@ -15,5 +16,9 @@ export const viewport: Viewport = {
 };
 
 export default function MenuLayout({ children }: { children: React.ReactNode }) {
-  return <div className="min-h-[100dvh] bg-black">{children}</div>;
+  return (
+    <div className="min-h-[100dvh] bg-black">
+      <RoleGuard require="ivy">{children}</RoleGuard>
+    </div>
+  );
 }
